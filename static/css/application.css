@@ -25,7 +25,37 @@
  margin: 0 12px 15px;
 }
 
+form ul.errorlist li{
+    color : #f00;
+}
 
- [class*="span"] {
-    margin-left: 10px;
-  }
+
+
+
+   #cnt1 {
+     background-color:#fff;
+     width:90%;
+     margin-bottom:70px;
+ }
+
+ .feature{
+     padding: 20px 0;
+    text-align: center;
+ }
+ .feature > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+ }
+ .feature > div:hover > div{
+    margin-top: -10px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 5px;
+    background: rgba(245, 248, 251, 0.10);
+    transition: 0.3s;
+ }
+
+ .feature h3{
+   color : gray;
+ }

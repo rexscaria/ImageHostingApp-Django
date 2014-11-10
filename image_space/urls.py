@@ -13,7 +13,9 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', views.index, name='index'),
     url(r'^login$', views.login, name='login'),
+    url(r'^register', views.register, name='register'),
     url(r'^contact', views.login, name='contact'),
+    url(r'^home', views.home, name='home'),
 
 
     url(r'^admin/', include(admin.site.urls)),
