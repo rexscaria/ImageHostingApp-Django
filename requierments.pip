@@ -1,2 +1,4 @@
 django==1.7.1
 psycopg2==2.5.4
+bcrypt==1.0.2
+pillow==2.6.1
