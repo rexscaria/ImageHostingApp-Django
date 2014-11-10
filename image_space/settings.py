@@ -89,3 +89,4 @@ STATIC_URL = '/static/'
 
 #Custom
 FILE_SYSTEM = '/workspace/image_space/photos'
+SESSION_KEY = 'current_user_id'
