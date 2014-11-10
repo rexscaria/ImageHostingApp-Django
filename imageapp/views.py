@@ -4,6 +4,7 @@ from django.conf import settings
 
 from imageapp.models import User
 from imageapp.models import Picture
+
 SESSION_KEY = settings.SESSION_KEY
 
 def index(request):
@@ -11,16 +12,13 @@ def index(request):
         return redirect('home')
     return redirect('login')
 
+
 def login(request):
     remove_session(request)
-    return render(request,'login.html')
+    return render(request, 'login.html')
 
 
-
-
-
-
-#private
+# private
 
 def remove_session(request):
     if SESSION_KEY in request.session:

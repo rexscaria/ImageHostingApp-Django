@@ -1,0 +1,101 @@
+{% load bootstrap_toolkit %}
+{% load url from future %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:" en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="ASU CSE 360 sample solution">
+    <meta name="author" content="Arun Scaria">
+    {% block blockbots %}
+    <meta name="robots" content="NONE,NOARCHIVE"/>
+    {% endblock %}
+    {% block extrastyle %}{% endblock %}
+
+    {% load staticfiles %}
+
+    {% bootstrap_stylesheet_tag %}
+    {% bootstrap_stylesheet_tag "responsive" %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/application.css"/>
+    <style type="text/css">
+        body {
+        padding-top: 60px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    {% bootstrap_javascript_tag %}
+    {% block extra_head %}{% endblock %}
+</head>
+{% load i18n %}
+
+<body>
+
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">ImageSpace</a>
+
+
+            <div class="pull-right">
+                {% block userlinks %}
+
+                <ul class="nav pull-right">
+                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
+                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
+                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
+                </ul>
+
+                {% endblock %}
+
+                <ul class="nav">
+                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Container -->
+<div id="wrap">
+    <div id="main" class="container clear-top">
+
+        {% bootstrap_messages %}
+        {% block content %}Empty page{% endblock %}
+    </div>
+
+</div>
+<!-- END Container -->
+
+<footer>
+    <div class="foot-fixed-bottom">
+        <div class="container">
+
+            <hr>
+            </p>
+            <div class="span4">
+                <p><a href="https://asu.edu">ASU Fall 2014 CSE 360 Sample solution Iteration 1</a></p>
+            </div>
+            <div class="" style="text-align:right">
+                <p>
+                    <a href="http://github.com/scaria">Arun Scaria</a> 2014
+                    |
+                    <a href="http://www.gnu.org/copyleft/gpl.html">license</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+import os
 """
 Django settings for image_space project.
 
@@ -30,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap_toolkit',
     'imageapp',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -86,7 +91,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 #Custom
 FILE_SYSTEM = '/workspace/image_space/photos'
 SESSION_KEY = 'current_user_id'
+ADMIN_TITLE = 'ImageSpace Admin Portal'
+SITE_TITLE = 'ImageSpace Admin'
+
+ROOT_PATH = os.path.join(os.path.dirname(BASE_DIR), 'image_space')
+
+
+STATICFILES_DIRS = (
+    os.path.join(ROOT_PATH, 'static'),
+)
+
+MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
