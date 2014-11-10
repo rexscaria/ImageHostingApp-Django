@@ -32,7 +32,7 @@ class User(models.Model):
 
 
 class Picture(models.Model):
-    user = models.ForeignKey(User, null=False)
+    user = models.ForeignKey(User, null=False, related_name='pictures')
     photo = models.ImageField(storage=file_system)
 
     def __unicode__(self):
