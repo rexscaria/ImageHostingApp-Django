@@ -41,15 +41,17 @@
 
 
             <div class="pull-right">
+                {% if user %}
                 {% block userlinks %}
 
                 <ul class="nav pull-right">
-                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
+                    <li><a href="{% url 'home' %}" class="">Home</a></li>
                     <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
                     <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
                 </ul>
 
                 {% endblock %}
+                {% endif %}
 
                 <ul class="nav">
                     <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>

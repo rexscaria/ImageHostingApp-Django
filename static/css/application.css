@@ -59,3 +59,74 @@ form ul.errorlist li{
  .feature h3{
    color : gray;
  }
+
+
+.home{
+margin-bottom : 70px;
+}
+
+ .home img {
+
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
+
+
+.home .content{
+    position:relative;
+}
+
+.home .content a.edit {
+    position:absolute;
+bottom:45px;
+right:45px;
+background:rgba(0, 0, 57, 0.5);
+color:#FFF;
+padding: 5px;
+border-radius: 8px;
+}
+
+.home .content input.edit {
+position:absolute;
+bottom:35px;
+right:35px;
+background:rgba(0, 0, 57, 0.5);
+color:#FFF;
+padding: 5px;
+border-radius: 8px;
+
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+

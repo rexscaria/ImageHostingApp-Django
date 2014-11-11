@@ -107,3 +107,4 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
+

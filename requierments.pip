@@ -4,3 +4,4 @@ bcrypt==1.0.2
 pillow==2.6.1
 django-admin-bootstrapped==2.1.0
 django-bootstrap-toolkit==2.15.0
+django-bootstrap3

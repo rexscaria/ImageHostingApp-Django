@@ -49,11 +49,11 @@ def register(request):
 
 
 def home(request):
-    if check_login() == False:
+    if check_login(request) == False:
         return redirect('login')
     current_user = User.objects.get(id=request.session[SESSION_KEY])
     pictures = current_user.pictures
-    return render(request, 'home.html', {'pictures' : pictures, 'user' : current_user})
+    return render(request, 'home.html', {'pictures': pictures.all(), 'user': current_user})
 
 
 
