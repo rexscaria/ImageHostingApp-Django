@@ -10,7 +10,7 @@
 <div class="container home">
 
     {% for picture in pictures %}
-    {%if forloop.counter0|divisibleby:4 %}
+    {% if forloop.counter0|divisibleby:4 %}
     <div class="row">
         {% endif %}
 

@@ -41,16 +41,17 @@
 
 
             <div class="pull-right">
-                {% if user %}
-                {% block userlinks %}
+                {% if user != None %}
+                    {% block userlinks %}
 
-                <ul class="nav pull-right">
-                    <li><a href="{% url 'home' %}" class="">Home</a></li>
-                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
-                    <li><a href="{% url 'contact' %}" class="">Contact Us</a></li>
-                </ul>
+                    <ul class="nav pull-right">
+                        <li><a href="{% url 'home' %}" class="">Home</a></li>
+                        <li><a href="{% url 'upload' %}" class="">Upload</a></li>
+                        <li><a href="{% url 'settings' %}" class="">Setting</a></li>
+                        <li><a href="{% url 'logout' %}" class="">Logout</a></li>
+                    </ul>
 
-                {% endblock %}
+                    {% endblock %}
                 {% endif %}
 
                 <ul class="nav">

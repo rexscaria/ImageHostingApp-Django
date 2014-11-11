@@ -5,6 +5,7 @@ from django.conf import  settings
 
 # Create your models here.
 file_system = FileSystemStorage(location=settings.FILE_SYSTEM)
+profile_pic_file_system = FileSystemStorage(location=settings.PROFILE_PICTURE_FILE_SYSTEM)
 
 class User(models.Model):
     email = models.EmailField(max_length=200, null=False, unique=True, blank=False)
@@ -24,14 +25,17 @@ class User(models.Model):
         print 'CALLED', value
         return bcrypt.hashpw(value, bcrypt.gensalt())
 
-    def __unicode__(self):
+    def full_name(self):
         return "{0} {1}".format(self.first_name, self.second_name)
+
+    def __unicode__(self):
+        return self.full_name()
 
     @staticmethod
     def return_valid_user(email_address, raw_password):
         raw_password = raw_password.encode('ascii','ignore')
-        user = User.objects.filter(email=email_address, password=raw_password)[:1].get()
-        return user if user != None else None
+        user = User.objects.filter(email=email_address, password=raw_password)[:1]
+        return user.get() if user.exists() else None
 
 
 class Picture(models.Model):
@@ -40,4 +44,19 @@ class Picture(models.Model):
 
     def __unicode__(self):
         return "{0} {1}".format(self.user, self.photo)
+
+def get_profile_pic_name(instance, filename):
+        return "{0}".format(instance.user.id)
+
+class Settings(models.Model):
+    user = models.ForeignKey(User, null=False, blank=False, related_name='settings')
+    profile_pic = models.ImageField(storage=profile_pic_file_system, upload_to=get_profile_pic_name, null=False)
+
+
+    def __unicode__(self):
+        return "{0} {1}".format(self.user, self.profile_pic)
+
+
+
+
 

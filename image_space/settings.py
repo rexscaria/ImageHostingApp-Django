@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bootstrap_toolkit',
     'imageapp',
+    'django_extensions',
 
 )
 
@@ -95,6 +96,7 @@ MEDIA_URL = '/media/'
 
 #Custom
 FILE_SYSTEM = '/workspace/image_space/photos'
+PROFILE_PICTURE_FILE_SYSTEM = os.path.join(FILE_SYSTEM, 'profile_pics');
 SESSION_KEY = 'current_user_id'
 ADMIN_TITLE = 'ImageSpace Admin Portal'
 SITE_TITLE = 'ImageSpace Admin'
