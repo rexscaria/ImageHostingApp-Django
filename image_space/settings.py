@@ -98,27 +98,30 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 #Custom
+#
 
-ROOT_PATH = os.path.join(os.path.dirname(BASE_DIR), 'image_space')
 
+
+
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'photos')
 
 STATICFILES_DIRS = (
-    os.path.join(ROOT_PATH, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
-
-MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
-
-STATIC_ROOT = 'staticfiles'
-
 print STATIC_ROOT
-print ROOT_PATH
+print BASE_DIR
 print MEDIA_ROOT
 print STATICFILES_DIRS
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
-FILE_SYSTEM = os.path.join(ROOT_PATH, 'photos')
+FILE_SYSTEM = os.path.join(BASE_DIR, 'photos')
 PROFILE_PICTURE_FILE_SYSTEM = os.path.join(FILE_SYSTEM, 'profile_pics');
 SESSION_KEY = 'current_user_id'
 ADMIN_TITLE = 'ImageSpace Admin Portal'
