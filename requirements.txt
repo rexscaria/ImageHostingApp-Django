@@ -6,3 +6,4 @@ django-admin-bootstrapped==2.1.0
 django-bootstrap-toolkit==2.15.0
 django-bootstrap3
 django_extensions
+django-toolbelt

@@ -95,11 +95,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 #Custom
-FILE_SYSTEM = '/workspace/image_space/photos'
-PROFILE_PICTURE_FILE_SYSTEM = os.path.join(FILE_SYSTEM, 'profile_pics');
-SESSION_KEY = 'current_user_id'
-ADMIN_TITLE = 'ImageSpace Admin Portal'
-SITE_TITLE = 'ImageSpace Admin'
 
 ROOT_PATH = os.path.join(os.path.dirname(BASE_DIR), 'image_space')
 
@@ -109,4 +104,12 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
+
+FILE_SYSTEM = os.path.join(ROOT_PATH, 'photos')
+PROFILE_PICTURE_FILE_SYSTEM = os.path.join(FILE_SYSTEM, 'profile_pics');
+SESSION_KEY = 'current_user_id'
+ADMIN_TITLE = 'ImageSpace Admin Portal'
+SITE_TITLE = 'ImageSpace Admin'
+
+
 
