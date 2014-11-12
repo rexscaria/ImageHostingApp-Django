@@ -111,11 +111,13 @@ MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+print( BASE_DIR)
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(ROOT_PATH, 'static'),
 )
 
 
