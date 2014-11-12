@@ -102,11 +102,23 @@ MEDIA_URL = '/media/'
 ROOT_PATH = os.path.join(os.path.dirname(BASE_DIR), 'image_space')
 
 
-STATICFILES_DIRS = (
-    os.path.join(ROOT_PATH, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(ROOT_PATH, 'static'),
+# )
 
 MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
+
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
 
 FILE_SYSTEM = os.path.join(ROOT_PATH, 'photos')
 PROFILE_PICTURE_FILE_SYSTEM = os.path.join(FILE_SYSTEM, 'profile_pics');
