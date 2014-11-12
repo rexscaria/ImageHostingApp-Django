@@ -29,6 +29,35 @@
     {% endif %}
     {% endfor %}
 
+    {% if pictures|length == 0 %}
+
+        <div class="container-fluid login">
+	<div class="row-fluid">
+		<div class="span12">
+
+			<div class="hero-unit">
+				<h2>
+					Welcome to your album.
+				</h2>
+                <h4>
+					Oops!! Its' empty. Let's save some of your memories.
+				</h4>
+
+				<p>
+					Please upload some photos clicking the 'Upload Photo' button.
+                    <br/>
+                    <br/>
+                    <br/>
+
+					<a class="btn btn-primary btn-large" href="{% url 'upload' %}">Upload Photo</a>
+				</p>
+            </div>
+        </div>
+    </div>
+
+
+    {% endif %}
+
     <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
         <filter id="myfilter">
 

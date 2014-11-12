@@ -62,7 +62,7 @@ def home(request):
 
 def logout(request):
     remove_session(request)
-    messages.add_message(request, messages.SUCCESS, 'See you later. Login anytime you wish.')
+    messages.add_message(request, messages.SUCCESS, 'See you later. Login anytime you wish')
     return redirect('login')
 
 def settings(request):
@@ -77,6 +77,7 @@ def settings(request):
             settings = Settings.objects.get_or_create(user=current_user)[0]
             settings.profile_pic = settings_form.cleaned_data['image']
             settings.save()
+            messages.add_message(request, messages.SUCCESS, 'Profile image updated')
 
     user_settings = current_user.settings.all()
     user_settings = user_settings[:1].get() if user_settings.exists() else None
@@ -97,6 +98,7 @@ def upload(request):
             picture = Picture(user=current_user)
             picture.photo = upload_form.cleaned_data['image']
             picture.save()
+            messages.add_message(request, messages.SUCCESS, 'Uploaded successfully. Visit home page to see the change.')
 
     return render(request, 'upload.html', { 'user': current_user, 'form': upload_form})
 
