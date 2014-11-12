@@ -3,3 +3,4 @@
 photos/
 .DS_store
 virt
+staticfiles/
