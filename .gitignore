@@ -1,6 +1,8 @@
 *.pyc
 .idea
+image_space/photos/
 photos/
 .DS_store
 virt
 staticfiles/
+.coverage

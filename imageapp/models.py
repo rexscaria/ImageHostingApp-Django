@@ -22,14 +22,17 @@ class User(models.Model):
 
     def hash_password(self, value):
         value = value.encode('ascii','ignore')
-        print 'CALLED', value
         return bcrypt.hashpw(value, bcrypt.gensalt())
+
+    def check_password(self,password,hash):
+        return bcrypt.hashpw(password, hash) == hash
 
     def full_name(self):
         return "{0} {1}".format(self.first_name, self.second_name)
 
     def __unicode__(self):
         return self.full_name()
+
 
     @staticmethod
     def return_valid_user(email_address, raw_password):

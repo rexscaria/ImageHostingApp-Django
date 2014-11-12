@@ -9,3 +9,4 @@ django_extensions
 django-toolbelt
 whitenoise
 Werkzeug
+coverage
