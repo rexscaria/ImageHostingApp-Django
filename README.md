@@ -19,3 +19,14 @@ Make sure you have installed python 2.7, postgresql and pip
 4. Run django server. `python manage.py runserver`
 5. Your application will be available at http://127.0.0.1:8000
 
+To Run Tests
+------------
+
+1. Run `python manage.py test imageapp`
+
+
+To get Test Coverage
+--------------------
+
+1. Run test with `python manage.py test imageapp`
+2. Run `coverage report`
