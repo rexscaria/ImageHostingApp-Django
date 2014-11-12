@@ -46,34 +46,30 @@
 			</div>
 			<div class="row-fluid">
 				<div class="span4 offset2" >
-					<form>
+                    <form action="login" method="post">
+
 						<fieldset>
 							 <legend>Login</legend>
-                            <form action="login" method="post">
+
                             {% csrf_token %}
                             {{ login_form }}
                             <br/>
                             <br/>
                             <input class="btn btn-primary btn-large"  type="submit" value="Login now"/>
-                        </form>
-
 						</fieldset>
 					</form>
 				</div>
 
 				<div class="span3 offset1" >
-					<form>
+					<form action="register" method="post">
 						<fieldset>
 							 <legend>Register</legend>
-                            <form action="register" method="post">
                             {% csrf_token %}
                             {{ registration_form }}
                             <br/>
                             <br/>
                             <input class="btn btn-primary btn-large"  type="submit" value="Register now"/>
-                        </form>
-
-						</fieldset>
+  						</fieldset>
 					</form>
 				</div>
 			</div>
