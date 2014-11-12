@@ -1,0 +1,135 @@
+.foot-fixed-bottom {
+ bottom: 0;
+ display: block;
+ left: 0;
+ margin-bottom: 0;
+ position: fixed;
+ right: 0;
+ z-index: 1030;
+}
+.foot-fixed-bottom .container {
+ background-color: rgb(254, 254, 254);
+ margin-left: auto;
+ margin-right: auto;
+ padding-bottom: 2px;
+}
+.foot-fixed-bottom hr {
+ border-image: none;
+ border-style: solid none;
+ border-width: 1px 0;
+ margin: 0 0 5px;
+ width: 100%;
+}
+.foot-fixed-bottom p {
+ font-size: 14px;
+ margin: 0 12px 15px;
+}
+
+form ul.errorlist li{
+    color : #f00;
+}
+
+
+
+
+   #cnt1 {
+     background-color:#fff;
+     width:90%;
+     margin-bottom:70px;
+ }
+
+ .feature{
+     padding: 20px 0;
+    text-align: center;
+ }
+ .feature > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+ }
+ .feature > div:hover > div{
+    margin-top: -10px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 5px;
+    background: rgba(245, 248, 251, 0.10);
+    transition: 0.3s;
+ }
+
+ .feature h4{
+   color : gray;
+ }
+
+
+.home, .login{
+margin-bottom : 70px;
+}
+
+ .home img {
+
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
+
+
+.home .content{
+    position:relative;
+}
+
+.home .content a.edit {
+    position:absolute;
+bottom:45px;
+right:45px;
+background:rgba(0, 0, 57, 0.5);
+color:#FFF;
+padding: 5px;
+border-radius: 8px;
+}
+
+.home .content input.edit {
+position:absolute;
+bottom:35px;
+right:35px;
+background:rgba(0, 0, 57, 0.5);
+color:#FFF;
+padding: 5px;
+border-radius: 8px;
+
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+div.hero-unit{
+    text-align: center;
+}

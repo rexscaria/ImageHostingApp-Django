@@ -102,24 +102,16 @@ MEDIA_URL = '/media/'
 ROOT_PATH = os.path.join(os.path.dirname(BASE_DIR), 'image_space')
 
 
-# STATICFILES_DIRS = (
-#     os.path.join(ROOT_PATH, 'static'),
-# )
-
-MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
-
-
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-print( BASE_DIR)
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
     os.path.join(ROOT_PATH, 'static'),
 )
 
+MEDIA_ROOT = os.path.join(ROOT_PATH, 'photos')
+
+STATIC_ROOT = 'staticfiles'
+
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 FILE_SYSTEM = os.path.join(ROOT_PATH, 'photos')
