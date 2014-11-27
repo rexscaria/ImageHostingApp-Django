@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'bootstrap_toolkit',
     'imageapp',
     'django_extensions',
+    'django_nose',
 
 )
 
@@ -121,5 +122,7 @@ SITE_TITLE = 'ImageSpace Admin'
 #TEST_RUNNER = 'django_selenium.selenium_runner.SeleniumTestRunner'
 
 from selenium import webdriver
-WEB_DRIVER = webdriver.Firefox()
+WEB_DRIVER = webdriver.Firefox
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 

@@ -10,7 +10,7 @@ class UserSignout(LiveServerTestCase):
     fixtures = ['testdata.json']
 
     def setUp(self):
-        self.driver = settings.WEB_DRIVER
+        self.driver = settings.WEB_DRIVER()
         self.driver.implicitly_wait(30)
         self.base_url = self.live_server_url
         self.verificationErrors = []
