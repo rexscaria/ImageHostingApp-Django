@@ -10,3 +10,5 @@ django-toolbelt
 whitenoise
 Werkzeug
 coverage
+selenium
+django-selenium

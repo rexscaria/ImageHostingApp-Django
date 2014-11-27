@@ -1,0 +1,11 @@
+
+% copied from \marginpar
+\def\@chgbar#1{\ifhmode \@bsphack\@floatpenalty -\@Mii\else
+   \@floatpenalty-\@Miii\fi\ifinner
+      \@parmoderr\@floatpenalty\z@
+    \else\@next\@currbox\@freelist{\global
+      \count\@currbox#1}{\@floatpenalty\z@ \@fltovf
+      \def\@currbox{\@tempboxa}}\fi
+     \setbox\@tempboxa\vbox
+     \bgroup\end@float\@esphack}
+

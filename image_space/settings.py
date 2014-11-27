@@ -118,5 +118,8 @@ SESSION_KEY = 'current_user_id'
 ADMIN_TITLE = 'ImageSpace Admin Portal'
 SITE_TITLE = 'ImageSpace Admin'
 
+#TEST_RUNNER = 'django_selenium.selenium_runner.SeleniumTestRunner'
 
+from selenium import webdriver
+WEB_DRIVER = webdriver.Firefox()
 
