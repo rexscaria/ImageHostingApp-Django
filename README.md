@@ -23,6 +23,7 @@ To Run Tests
 ------------
 
 1. Run `python manage.py test imageapp`
+Now this will run both unit test and functional tests. For functional test the firefox web driver is used. So make sure firefox is installed. Or go to settings and change the web driver to googlechrome or your choice.
 
 
 To get Test Coverage
